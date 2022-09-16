@@ -1,0 +1,13 @@
+html, body, :root {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    font-family: Rubik;
+    scroll-behavior: smooth;
+}
+
+@font-face {
+    font-family: Rubik;
+    src: url('./Rubik-font/Rubik-VariableFont_wght.ttf');
+}

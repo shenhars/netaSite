@@ -1,0 +1,48 @@
+.header {
+    display: flex;
+    position: sticky;
+    top: 0;
+    height: auto;
+    flex-direction: row-reverse;
+    z-index: 1;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: rgb(198, 196, 199);
+    box-shadow: 0 3px 4px rgb(116, 131, 126);
+}
+
+nav {
+    display: flex;
+    flex-direction: row-reverse;
+    width: 70%;
+    height: auto;
+    padding-right: 2%;
+}
+
+.link {
+    display: inline-block;
+    right: 0;
+    width: auto;
+    padding: 1.5% 3%;
+    font-size: 150%;
+    color: rgb(33, 57, 49);
+    text-decoration-line: none;
+}
+
+.link:hover {
+    background-color: rgb(160, 178, 173);
+}
+
+.headerGif {
+    position: absolute;
+    left: 0;
+    height: 80%;
+    width: auto;
+    padding-left: 2%;
+}
+
+@media screen and (max-width: 700px) {
+    .header {
+        display: none;
+    }
+}

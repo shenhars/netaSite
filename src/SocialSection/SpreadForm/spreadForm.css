@@ -1,0 +1,41 @@
+.spreadSec {
+    display: flex;
+    justify-content: space-around;
+    width: 50%;
+}
+
+.innerContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.spreadInputs {
+    width: 30%;
+    text-align: right;
+    padding: 1.5%;
+    font-size: 17px;
+}
+
+.spreadHeader {
+    width: 50%;
+    margin-top: 7%;
+    text-align: center;
+}
+
+@media screen and (max-width: 700px) {
+    .spreadSec {
+        width: 100%;
+    }
+
+    .spreadInputs {
+        width: 50%;
+        padding: 3%;
+        border-radius: 3px;
+    }
+
+    .spreadHeader {
+        width: 70%;
+    }
+}

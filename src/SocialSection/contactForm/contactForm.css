@@ -1,0 +1,55 @@
+.contactSec {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 50%;
+}
+
+.innerContact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.contactInputs {
+    text-align: right;
+    padding: 1.5%;
+    width: 30%;
+    font-size: 17px;
+}
+
+.contactHeader {
+    width: 100%;
+    text-align: center;
+}
+
+#message {
+    height: 50px;
+}
+
+.submissionContactButton {
+    margin-bottom: 7%;
+    margin-right: 23%;
+}
+
+@media screen and (max-width: 700px) {
+    .contactSec {
+        width: 100%;
+    }
+
+    .contactHeader {
+        margin-top: 10%;
+    }
+
+    .contactInputs {
+        width: 50%;
+        padding: 3%;
+        border-radius: 3px;
+    }
+
+    .submissionContactButton {
+        margin-right: 37%;
+    }
+}
