@@ -44,12 +44,12 @@
     }
 
     .contactInputs {
-        width: 50%;
+        width: 60%;
         padding: 3%;
         border-radius: 3px;
     }
 
     .submissionContactButton {
-        margin-right: 37%;
+        margin-right: 47%;
     }
 }

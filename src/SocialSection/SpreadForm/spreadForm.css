@@ -30,12 +30,12 @@
     }
 
     .spreadInputs {
-        width: 50%;
+        width: 60%;
         padding: 3%;
         border-radius: 3px;
     }
 
     .spreadHeader {
-        width: 70%;
+        width: 75%;
     }
 }
