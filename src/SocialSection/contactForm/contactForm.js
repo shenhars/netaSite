@@ -11,7 +11,7 @@ const ContactForm = () => {
             .then((result) => {
                 console.log(result.text);
                 e.target.reset();
-                alert('!נשלח');
+                alert('נשלח!');
             }, (error) => {
                 console.log(error.text);
                 alert('קרתה תקלה, נסה שוב מאוחר יותר');
