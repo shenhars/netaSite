@@ -1,24 +1,42 @@
 import axios from 'axios';
 import React, { useState } from 'react';
 import './spreadForm.css';
+import loadGif from '../../Images/load-gif.gif';
 
-const PORT = 'https://netasite-server.onrender.com';
-const buildPORT = '4001';
+// const PORT = 'https://netasite-server.onrender.com';
+// const buildPORT = '4001';
 
 const SpreadForm = () => {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
-
+    
     const handleNameChange = (e) => {
         setName(e.target.value);
     }
-
+    
     const handleEmailChange = (e) => {
         setEmail(e.target.value);
+    }
+    
+    const submitButton = document.getElementsByClassName('submissionSpreadButton')[0];
+    let load = document.createElement('img');
+    load.className = 'loadGif';
+    load.src = loadGif;
+
+    const loading = () => {
+        submitButton.innerHTML = '';
+        load = submitButton.appendChild(load);
+    }
+
+    const doneLoading = () => {
+        load.remove();
+        submitButton.innerHTML = 'הרשמה';
     }
 
     const addToDatabase = async (e) => {
         e.preventDefault();
+        loading();
+        
 
         await axios.post(`https://netasite-server.onrender.com/addToDatabase`, {
             name: name,
@@ -33,6 +51,8 @@ const SpreadForm = () => {
             console.log(err);   
             alert('קרתה תקלה, נסה שוב מאוחר יותר');
         });
+
+        doneLoading();
     }
 
     return (
