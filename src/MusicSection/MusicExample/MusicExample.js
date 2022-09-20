@@ -6,7 +6,6 @@ const MusicExample = ({ src }) => {
     return (
         <div className='songDiv'>
             <a href={src.videoUrl} target='_blank' rel='noreferrer'>
-                {/* <div className='playDiv'>לחץ להשמעה</div> */}
                 <img className='songImg' src={a} alt={src.url}/>
             </a>
             <p className='songDetails'>{src.songName}</p>

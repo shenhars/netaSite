@@ -1,9 +1,14 @@
 .songDiv {
-    width: 30%;
+    width: 25%;
     height: 60%;
     display: inline-block;
     justify-content: center;
     text-align: center;
+    background-color: rgb(233, 240, 238);
+    margin-bottom: 5%;
+    padding-top:  3%;
+    color: black;
+    border-radius: 7%;
 }
 
 .songImg {
@@ -26,7 +31,6 @@
     width: 100%;
     text-align: center;
     font-size: 150%;
-    margin-bottom: 15%;
 }
 
 .playDiv {
@@ -36,6 +40,8 @@
 @media screen and (max-width: 700px) {
     .songDiv {
         width: 65%;
+        background-color: transparent;
+        color: white;
     }
 
     .songDetails {
