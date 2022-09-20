@@ -30,9 +30,25 @@
 .aboutPar {
     margin: 0;
     padding: 20px;
-    top: 0;
+    text-align: right;
+}
+
+.aboutHeader {
+    margin: 0;
+    padding: 20px;
     text-align: right;
 }
 
 @media screen and (max-width: 700px) {
+    .aboutPar {
+        font-size: 70%;
+    }
+
+    .aboutHeader {
+        font-size: 150%;
+    }
+
+    .parDiv {
+        width: 85%;
+    }
 }

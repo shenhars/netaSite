@@ -5,8 +5,8 @@ const ShowsSec = () => {
     return (
         <div className='shows' id='הופעות'>
             <div className='parDiv'>
-                <h1 className='aboutPar'>:הופעות</h1>
-                <p className='aboutPar'>יצאתי קצת לנפוש, חכו להופעות בקרוב</p>
+                <h1 className='showsHeader'>:הופעות</h1>
+                <p className='showsPar'>יצאתי קצת לנפוש, חכו להופעות בקרוב</p>
             </div>
         </div>
     )
