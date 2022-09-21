@@ -26,7 +26,7 @@ const ContactForm = () => {
                 <input id='mail' name='mail' type='mail' placeholder='אימייל' className='contactInputs' required /><br />
                 <input id='subject' name='subject' type='text' placeholder='נושא' className='contactInputs' required /><br />
                 <textarea id='message' name='message' type='text' placeholder='הודעה' className='contactInputs' required /><br />
-                <button className='submissionContactButton' type='submit'>שלח</button>
+                <button className='submissionContactButton form-button' type='submit'>שלח</button>
             </div>
         </form>
     )

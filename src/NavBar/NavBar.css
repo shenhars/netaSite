@@ -1,6 +1,7 @@
 .header {
     display: flex;
-    position: sticky;
+    position: fixed;
+    width: 100%;
     top: 0;
     height: auto;
     flex-direction: row-reverse;
@@ -11,12 +12,33 @@
     box-shadow: 0 3px 4px rgb(116, 131, 126);
 }
 
-nav {
+.computer-nav {
     display: flex;
     flex-direction: row-reverse;
     width: 70%;
     height: auto;
     padding-right: 2%;
+}
+
+.phone-nav {
+    display: none;
+    width: 20%;
+    position: fixed;
+    z-index: 1;
+    align-items: center;
+    transition: all ease 1s;
+}
+
+.nav-icons {
+    background-color: transparent;
+    width: auto;
+    padding: 20px;
+    text-decoration: none;
+    color: black;
+    margin-right: 2%;
+    margin-left: 2%;
+    transition: 1.5s;
+    border: 0;
 }
 
 .link {
@@ -41,8 +63,13 @@ nav {
     padding-left: 2%;
 }
 
+
 @media screen and (max-width: 700px) {
-    .header {
+    .computer-nav {
         display: none;
+    }
+
+    .phone-nav {
+        display: flex;
     }
 }

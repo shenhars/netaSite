@@ -61,7 +61,7 @@ const SpreadForm = () => {
                 <h3 className='spreadHeader' htmlFor='name'>הצטרפו לרשימת התפוצה שלי להיות הראשונים לקבל את כל הדברים החדשים</h3><br />
                 <input className='spreadInputs' id='name' type='text' placeholder='שם מלא' onChange={handleNameChange} required/><br />
                 <input className='spreadInputs' id='mail' type='mail' placeholder='אימייל' onChange={handleEmailChange} required/><br />
-                <button className='submissionSpreadButton' type='submit'>הרשמה</button><br />
+                <button className='submissionSpreadButton form-button' type='submit'>הרשמה</button><br />
             </div>
         </form>
     )

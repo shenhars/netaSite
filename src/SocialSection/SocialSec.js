@@ -20,11 +20,10 @@ const SocialSec = () => {
 
     return (
         <div className='social' id='עוד'>
-            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></link>
             <h1 className='socialTitle'>חפשו אותי</h1>
             <div className='iconsDiv'>
                 {srcs.map((src, i) => {
-                    const a_class = `fa fa-${src.name}`;
+                    const a_class = `social-icon fa fa-${src.name}`;
                     
                     return <a target='_blank' href={src.href} className={a_class} key={`${i}${src.name}`} rel='noreferrer'></a>;
                 })}
