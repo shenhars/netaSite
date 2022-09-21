@@ -11,14 +11,6 @@
     border-radius: 7%;
 }
 
-.songDiv:hover {
-    width: 27%;
-    height: 62%;
-    margin-left: -1%;
-    margin-right: -1%;
-    margin-bottom: 3%;
-}
-
 .songImg {
     width: 80%;
     height: 80%;
@@ -60,5 +52,15 @@
     .songDetailsLength {
         font-size: 100%;
         margin-top: 0%;
+    }
+}
+
+@media screen and (min-width: 700px) {
+    .songDiv:hover {
+        width: 27%;
+        height: 62%;
+        margin-left: -1%;
+        margin-right: -1%;
+        margin-bottom: 3%;
     }
 }
