@@ -33,7 +33,7 @@ const SocialSec = () => {
                 <ContactForm />
                 <SpreadForm />
             </div>
-            <p className='credit'>photos by <a className='creditLink' target='_blank' rel='noreferrer' href='https://roicphotography.mypixieset.com/'>roi cohen</a></p>
+            <p className='credit'>photos by <a className='creditLink' target='_blank' rel='noreferrer' href='https://roicphotography.mypixieset.com/'>roi cohen</a>   <b>·</b>   © 2022 Gilad Shenhar</p>
         </div>
     )
 };
