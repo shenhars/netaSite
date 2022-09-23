@@ -28,7 +28,7 @@
 .arrow {
     align-self: center;
     font-size: 300%;
-    padding-bottom: 5%;
+    margin-bottom: 5%;
 }
 
 .arrow:hover {

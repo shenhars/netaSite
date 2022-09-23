@@ -1,16 +1,8 @@
-.images {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    margin: 0;
-}
-
 .aboutMe {
     color: rgb(255, 255, 255);
     font-size: 200%;
     margin-top: 0;
-    height: 100vh;
+    height: 110vh;
     display: flex;
     flex-direction: row-reverse;
     position: relative;
@@ -39,7 +31,7 @@
     text-align: right;
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 800px) {
     .aboutPar {
         font-size: 70%;
     }
