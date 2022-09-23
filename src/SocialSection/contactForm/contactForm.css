@@ -10,13 +10,13 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 100%;
+    width: 30%;
 }
 
 .contactInputs {
     text-align: right;
-    padding: 1.5%;
-    width: 30%;
+    padding: 5%;
+    width: 100%;
     font-size: 17px;
 }
 
@@ -31,7 +31,7 @@
 
 .submissionContactButton {
     margin-bottom: 2%;
-    margin-right: 23%;
+    align-self: flex-start;
 }
 
 @media screen and (max-width: 700px) {
@@ -39,17 +39,21 @@
         width: 100%;
     }
 
+    .innerContact {
+        width: 60%;
+    }
+
     .contactHeader {
         margin-top: 10%;
     }
 
     .contactInputs {
-        width: 60%;
-        padding: 3%;
+        width: 100%;
+        padding: 5%;
         border-radius: 3px;
     }
 
     .submissionContactButton {
-        margin-right: 47%;
+        align-self: flex-start;
     }
 }
