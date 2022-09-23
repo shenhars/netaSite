@@ -31,7 +31,7 @@
     text-align: right;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 850px) {
     .aboutPar {
         font-size: 70%;
     }
@@ -42,5 +42,9 @@
 
     .parDiv {
         width: 85%;
+    }
+
+    .aboutMe {
+        padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
     }
 }

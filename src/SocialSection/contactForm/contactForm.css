@@ -34,7 +34,7 @@
     align-self: flex-start;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 850px) {
     .contactSec {
         width: 100%;
     }
