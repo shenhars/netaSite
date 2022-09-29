@@ -18,28 +18,42 @@ const NavBar = ({ srcs }) => {
     }];
 
     const [hidden, setHidden] = useState({display: 'none'});
-    const [divBackground, setDivBackground] = useState({backgroundColor: 'transparent'});
+    const [divBackground, setDivBackground] = useState();
     const [arrowDir, setArrowDir] = useState();
+    const [spalsh, setSplash] = useState();
 
     const handlePhoneMenuClick = () => {
         if (hidden.display === 'flex') {
             setHidden({display: 'none'});
             setDivBackground({
-                backgroundColor: 'transparent',
-                width: 'auto'
+                width: '15%',
+                height: '15%',
             });
             setArrowDir({
                 transform: 'rotate(0deg)'
             });
+            setSplash({
+                width: '1px',
+                height: '1px',
+                borderRadius: '50%'
+            });
         } else {
             setHidden({display: 'flex'});
             setDivBackground({
-                backgroundImage: 'linear-gradient(135deg, rgba(50, 51, 51, 1) 20%, rgba(223, 224, 224, 1) 100%)',
                 opacity: '0.8',
                 width: '100%',
+                height: '100%',
             });
             setArrowDir({
                 transform: 'rotate(180deg)'
+            });
+            setSplash({
+                backgroundImage: 'linear-gradient(135deg, rgba(50, 51, 51, 1) 47%, rgba(223, 224, 224, 1) 100%)',
+                width: '284vmax',
+                height: '284vmax',
+                top: '-142vmax',
+                left: '-142vmax',
+                borderRadius: '100%'
             });
         }
     };
@@ -65,6 +79,7 @@ const NavBar = ({ srcs }) => {
                         return <a href={iconLink} className={iconClass} key={iconKey}><b>{' ' + phoneIcon.href}</b></a>
                     })}
                 </div>
+                <div className='splash' style={spalsh}></div>
             </nav>
         </div>
     )

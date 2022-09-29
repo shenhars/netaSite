@@ -22,12 +22,14 @@
 
 .phone-nav {
     display: none;
-    width: 20%;
+    width: 15%;
+    height: 15%;
+    background-color: transparent;
     position: fixed;
     z-index: 1;
     align-items: center;
-    transition: all ease 1s;
-    border-bottom-right-radius: 40%;
+    justify-content: center;
+    letter-spacing: 3px;
 }
 
 .phone-menu-div {
@@ -44,10 +46,25 @@
     color: black;
     transition: 1.5s;
     border: 0;
+    font-size: 150%;
 }
 
 .arrow-icon {
     align-self: flex-start;
+    position: fixed;
+    top: 0;
+    font-size: 120%;
+}
+
+.splash {
+    position: fixed;
+    top: 5%;
+    left: 10%;
+    width: 1px;
+    height: 1px;
+    z-index: -1;
+    border-radius: 50%;
+    transition: all .5s ease-in;
 }
 
 .link {
