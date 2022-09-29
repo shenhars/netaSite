@@ -73,7 +73,7 @@
 }
 
 
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 900px) {
     .computer-nav {
         display: none;
     }

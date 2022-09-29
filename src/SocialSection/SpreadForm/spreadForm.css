@@ -37,7 +37,7 @@
     width: auto;
 }
 
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 900px) {
     .spreadSec {
         width: 100%;
         padding-bottom: 5%;
