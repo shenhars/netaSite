@@ -28,3 +28,14 @@ body::-webkit-scrollbar-thumb {
     font-family: Rubik;
     src: url('./Rubik-font/Rubik-VariableFont_wght.ttf');
 }
+
+@font-face {
+    font-family: Varela;
+    src: url('./Varela_Round/VarelaRound-Regular.ttf');
+}
+
+@media screen and (max-width: 950px) {
+    body {
+        font-family: Varela;
+    }
+}
