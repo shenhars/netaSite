@@ -8,7 +8,7 @@ import React from "react";
 function App() {
   return (
     <>
-      <NavBar srcs={["עלי", "הופעות", "מוזיקה", "עוד"]}/>
+      <NavBar />
       <AboutSec />
       <ShowsSec />
       <MusicSec />

@@ -19,7 +19,7 @@ const SocialSec = () => {
     }];
 
     return (
-        <div className='social' id='עוד'>
+        <div className='social' id='social'>
             <h1 className='socialTitle'>חפשו אותי</h1>
             <div className='iconsDiv'>
                 {srcs.map((src, i) => {

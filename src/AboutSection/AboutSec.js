@@ -3,7 +3,7 @@ import React from 'react';
 
 const AboutSec = () => {
     return (
-        <div className='aboutMe' id='עלי'>
+        <div className='aboutMe' id='aboutMe'>
             <div className='parDiv'>
                 <h1 className='aboutHeader'>:קצת עלי</h1>
                 <p className='aboutPar'>

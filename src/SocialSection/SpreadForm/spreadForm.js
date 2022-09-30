@@ -3,9 +3,6 @@ import React, { useState } from 'react';
 import './spreadForm.css';
 import loadGif from '../../Images/load-gif.gif';
 
-// const PORT = 'https://netasite-server.onrender.com';
-// const buildPORT = '4001';
-
 const SpreadForm = () => {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');

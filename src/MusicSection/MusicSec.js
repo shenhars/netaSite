@@ -54,7 +54,7 @@ export default function MusicSec() {
     }
     
     return (
-        <div className='music' id='מוזיקה'> 
+        <div className='music' id='music'> 
             <h1 className="musicTitle">:כמה טעימות</h1>
             <div className='musicExmp'>
                 <FaArrowAltCircleLeft className='arrow' onClick={handleLeftArrow}/>

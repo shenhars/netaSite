@@ -2,19 +2,19 @@ import './NavBar.css';
 import headerGif from '../Images/neta-gif-new.gif';
 import React, { useState } from 'react';
 
-const NavBar = ({ srcs }) => {
-    const phoneIcons = [{
-        icon: 'user',
-        href: 'עלי'
+const NavBar = () => {
+    const srcs = [{
+        id: 'aboutMe',
+        name: 'עלי'
     }, {
-        icon: 'microphone',
-        href: 'הופעות'
+        id: 'shows',
+        name: 'הופעות'
     }, {
-        icon: 'play',
-        href: 'מוזיקה'
+        id: 'music',
+        name: 'מוזיקה'
     }, {
-        icon: 'share',
-        href: 'עוד'
+        id: 'social',
+        name: 'עוד'
     }];
 
     const [hidden, setHidden] = useState({display: 'none'});
@@ -63,8 +63,9 @@ const NavBar = ({ srcs }) => {
             <header className='header'>
                 <nav className='computer-nav'>
                     {srcs.map((src, i) => {
-                        const link = `#${src}`;
-                        return <a href={link} key={i} className='link'>{src}</a>
+                        const link = `#${src.id}`;
+                        const linkKey = `${src.id}${i}`
+                        return <a href={link} key={linkKey} className='link'>{src.name}</a>
                     })}
                 </nav>
                 <img src={headerGif} alt='neta abecsis' className='headerGif'/>
@@ -72,11 +73,10 @@ const NavBar = ({ srcs }) => {
             <nav className='phone-nav' style={divBackground}>
                 <button className='arrow-icon nav-icons fa fa-arrow-right' onClick={handlePhoneMenuClick} style={arrowDir}/>
                 <div className='phone-menu-div' style={hidden}>
-                    {phoneIcons.map((phoneIcon, i) => {
-                        const iconClass = `nav-icons`
-                        const iconLink = `#${phoneIcon.href}`
-                        const iconKey = `icon${i}`
-                        return <a href={iconLink} className={iconClass} key={iconKey}><b>{' ' + phoneIcon.href}</b></a>
+                    {srcs.map((src, i) => {
+                        const link = `#${src.id}`
+                        const linkKey = `${src.id}${i}`
+                        return <a href={link} className='nav-icons' key={linkKey}><b>{' ' + src.name}</b></a>
                     })}
                 </div>
                 <div className='splash' style={spalsh}></div>
