@@ -40,7 +40,7 @@ const NavBar = ({ srcs }) => {
         } else {
             setHidden({display: 'flex'});
             setDivBackground({
-                opacity: '0.8',
+                opacity: '0.95',
                 width: '100%',
                 height: '100%',
             });
