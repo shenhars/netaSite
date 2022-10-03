@@ -6,7 +6,7 @@ import React from 'react';
 const SocialSec = () => {
     const srcs = [{
         name: 'facebook',
-        href: "https://www.facebook.com/search/top?q=%D7%A0%D7%98%D7%A2%20%D7%90%D7%91%D7%A7%D7%A1%D7%99%D7%A1%20neta%20abecassis"
+        href: "https://www.facebook.com/netaabecassismusic/about"
     }, {
         name: "youtube",
         href: "https://www.youtube.com/channel/UCx86a27W_bGdlT6Ij-S4RDQ" 
