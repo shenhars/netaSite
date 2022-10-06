@@ -3,6 +3,7 @@ import AboutSec from "./AboutSection/AboutSec";
 import ShowsSec from "./ShowsSection/ShowsSec";
 import MusicSec from "./MusicSection/MusicSec";
 import SocialSec from './SocialSection/SocialSec';
+import SocialNavBar from './SocialNavBar/socialNavBar';
 import React from "react";
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
       <ShowsSec />
       <MusicSec />
       <SocialSec />
+      <SocialNavBar />
     </>
   );
 }
