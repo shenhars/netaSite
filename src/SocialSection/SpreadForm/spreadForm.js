@@ -1,11 +1,13 @@
 import axios from 'axios';
 import React, { useState } from 'react';
 import './spreadForm.css';
-import loadGif from '../../Images/load-gif.gif';
+import Loading from './Loading/loading';
 
 const SpreadForm = () => {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
+    const [load, setLoad] = useState({display: 'none'});
+    const submitButton = document.getElementsByClassName('lodingInner')[0];
     
     const handleNameChange = (e) => {
         setName(e.target.value);
@@ -15,18 +17,13 @@ const SpreadForm = () => {
         setEmail(e.target.value);
     }
     
-    const submitButton = document.getElementsByClassName('submissionSpreadButton')[0];
-    let load = document.createElement('img');
-    load.className = 'loadGif';
-    load.src = loadGif;
-
     const loading = () => {
         submitButton.innerHTML = '';
-        load = submitButton.appendChild(load);
+        setLoad({display: 'flex'});
     }
 
     const doneLoading = () => {
-        load.remove();
+        setLoad({display: 'none'});
         submitButton.innerHTML = 'הרשמה';
     }
 
@@ -58,7 +55,12 @@ const SpreadForm = () => {
                 <h3 className='spreadHeader' htmlFor='name'>הצטרפו לרשימת התפוצה שלי להיות הראשונים לקבל את כל הדברים החדשים</h3><br />
                 <input className='spreadInputs' id='name' type='text' placeholder='שם מלא' onChange={handleNameChange} required/><br />
                 <input className='spreadInputs' id='mail' type='mail' placeholder='אימייל' onChange={handleEmailChange} required/><br />
-                <button className='submissionSpreadButton form-button' type='submit'>הרשמה</button><br />
+                <button className='submissionSpreadButton form-button' type='submit'>
+                    <div className='lodingInner'>הרשמה</div>
+                    <div className='loadingDiv' style={load}>
+                        <Loading />
+                    </div>
+                </button><br />
             </div>
         </form>
     )
