@@ -8,7 +8,7 @@ const ContactForm = () => {
         e.preventDefault();
 
         await axios.post(`https://netasite-server.onrender.com/sendMail`, {
-            target: e.target
+            details: e.target
         })
         .then((res) => {
             console.log(res);
