@@ -58,8 +58,8 @@ export default function MusicSec() {
             <h1 className="musicTitle">:כמה טעימות</h1>
             <div className='musicExmp'>
                 <FaArrowAltCircleLeft className='arrow' onClick={handleLeftArrow}/>
-                {indexArray.map((exmpSrc, i) => {
-                    return <MusicExample src={exmpSrc} key={i} />
+                {indexArray.map((exmpSrc) => {
+                    return <MusicExample src={exmpSrc} key={exmpSrc.index} />
                 })}
                 <FaArrowAltCircleRight className='arrow' onClick={handleRightArrow}/>
             </div>   
