@@ -6,16 +6,29 @@ const ContactForm = () => {
     
     const handleSubmit = async (e) => {
         e.preventDefault();
-        
-        emailjs.sendForm('service_tv65c5d', 'template_lab00tg', e.target, 'Mg28HpnzbfTgc3sge')
-            .then((result) => {
-                console.log(result.text);
-                e.target.reset();
-                alert('נשלח!');
-            }, (error) => {
-                console.log(error.text);
-                alert('קרתה תקלה, נסה שוב מאוחר יותר');
+
+        await axios.post(`https://netasite-server.onrender.com/sendMail`, {
+            target: e.target
+        })
+        .then((res) => {
+            console.log(res);
+            e.target.reset();
+            alert('!נשלח');
+        })
+        .catch((err) => {
+            console.log(err);
+            alert('קרתה תקלה, נסה שוב מאוחר יותר');
         });
+        
+        // emailjs.sendForm('service_tv65c5d', 'template_lab00tg', e.target, 'Mg28HpnzbfTgc3sge')
+        //     .then((result) => {
+        //         console.log(result.text);
+        //         e.target.reset();
+        //         alert('נשלח!');
+        //     }, (error) => {
+        //         console.log(error.text);
+        //         alert('קרתה תקלה, נסה שוב מאוחר יותר');
+        // });
     }
 
     return (
