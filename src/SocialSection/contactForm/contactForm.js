@@ -1,14 +1,20 @@
 import './contactForm.css';
-import React from 'react';
+import React, { useState } from 'react';
 import axios from 'axios';
 
 const ContactForm = () => {
-    
+    const [name, setName] = useState('');
+    const [email, setEmail] = useState('');
+    const [subject, setSubject] = useState('');
+    const [message, setMessage] = useState('');
     const handleSubmit = async (e) => {
         e.preventDefault();
 
         await axios.post(`https://netasite-server.onrender.com/sendMail`, {
-            details: e.target
+            name: name,
+            email: email,
+            subject: subject,
+            message: message
         })
         .then((res) => {
             console.log(res);
@@ -35,10 +41,10 @@ const ContactForm = () => {
         <form className='contactSec' method='POST' onSubmit={handleSubmit}>
             <div className='innerContact'>
                 <h1 className='contactHeader'>:צור קשר</h1>
-                <input id='name' name='name' type='text' placeholder='שם מלא' className='contactInputs' required /><br/>
-                <input id='mail' name='mail' type='mail' placeholder='אימייל' className='contactInputs' required /><br />
-                <input id='subject' name='subject' type='text' placeholder='נושא' className='contactInputs' required /><br />
-                <textarea id='message' name='message' type='text' placeholder='הודעה' className='contactInputs' required /><br />
+                <input id='name' name='name' type='text' placeholder='שם מלא' className='contactInputs' onChange={e => setName(e.target.value)} required /><br/>
+                <input id='mail' name='mail' type='mail' placeholder='אימייל' className='contactInputs' onChange={e => setEmail(e.target.value)} required /><br />
+                <input id='subject' name='subject' type='text' placeholder='נושא' className='contactInputs' onChange={e => setSubject(e.target.value)} required /><br />
+                <textarea id='message' name='message' type='text' placeholder='הודעה' className='contactInputs' onChange={e => setMessage(e.target.value)} required /><br />
                 <button className='submissionContactButton form-button' type='submit'>שלח</button>
             </div>
         </form>
